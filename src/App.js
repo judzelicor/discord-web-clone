@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// This is a temporary import
+import { ReactComponent as DiscordLogo } from "./assets/logo/discord.svg"
+import { ReactComponent as GithubLogo } from "./assets/logo/github.svg"
+
+
+class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
+
+    render() {
+        return (
+            <>
+                <div className="h-screen flex items-center justify-center flex-col">
+                    <div className="w-16 mb-7">
+                        <DiscordLogo />
+                    </div>
+                    <h1 className="text-5xl font-bold mb-4">Welcome to my Discord Web App Clone!</h1>
+                    <div className="flex items-center">
+                        <div className="w-5 mr-2">
+                            <GithubLogo />
+                        </div>
+                        <a href="https://github.com/judzelicor" target={ "_blank" }>@judzelicor</a>
+                    </div>
+                </div>
+            </>
+        )
+    }
 }
 
-export default App;
+export default App
+
